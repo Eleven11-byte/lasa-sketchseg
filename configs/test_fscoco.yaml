@@ -1,0 +1,73 @@
+dataset:
+  name: FSCOCOSeg
+  root: /path/to/fscoco-seg/train
+
+test:
+  root: /path/to/fscoco-seg/test
+  output_dir: outputs
+  render_size: 512
+
+train:
+  batch_size: 1
+  epochs: 1
+  lr: 1e-6
+  optimizer: adamw
+  weight_decay: 1e-4
+  save_every: 1
+  num_workers: 0
+  max_classes: 3
+  threshold: 0.4
+  margin: 0.5
+  freeze_text: true
+  use_distill: false
+  resume: false
+
+MODEL:
+  TRANSFER_TYPE: none
+  USE_PROMPT: false
+  PROMPT:
+    NUM_PREFIX: 8
+    NUM_SUFFIX: 0
+    NUM_TOKENS: 0
+    LOCATION: prepend
+    INITIATION: random
+    CLSEMB_FOLDER: ''
+    CLSEMB_PATH: ''
+    PROJECT: -1
+    DEEP: false
+    LOG: test_run
+    NUM_DEEP_LAYERS: null
+    REVERSE_DEEP: false
+    DEEP_SHARED: false
+    FORWARD_DEEP_NOEXPAND: false
+    HEAD: false
+    HEAD_CLASS: false
+    TRAINABLE_PARM: prompt,head
+    VIT_POOL_TYPE: original
+    DROPOUT: 0.1
+    SAVE_FOR_EACH_EPOCH: false
+
+loss:
+  add_weight: 0.1
+  distill_layers: [7, 10]
+
+wandb:
+  enable: false
+  project: lasa
+  name: smoke_test
+
+checkpoint_path: ''
+model_name: ViT-B/16
+semantic_templates: template/openai_template.txt
+attn_type: fused-attn
+fuse_feature: true
+size: 224
+logit_scale: 150
+bkg_thre: 0
+select_layer: -1
+sliding_crop_size: 0
+attention_thr: 0.12
+segmentation_threshold: 0.4
+class_threshold: 0.5
+mode: test
+fuse_type: default
