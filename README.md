@@ -1,6 +1,15 @@
-# LASA
+# Exploiting Cross-layer Structural Attention for Open-Vocabulary Scene Sketch Semantic Segmentation
 
-This directory contains a cleaned open-source version of the core code for training and evaluating the LASA sketch segmentation model.
+## Overview
+
+This repository accompanies our paper:
+**"Exploiting Cross-layer Structural Attention for Open-Vocabulary Scene Sketch Semantic Segmentation."**
+
+It contains a cleaned open-source version of the core LASA code for training and evaluating scene sketch semantic segmentation models.
+
+## Repository Status
+
+This repository is under active cleanup for public release.
 
 ## Directory Structure
 
@@ -8,6 +17,8 @@ This directory contains a cleaned open-source version of the core code for train
 LASA/
   configs/
     config.py
+    train_fscoco.yaml
+    test_fscoco.yaml
   models/
     modified_model.py
     prompt_extractor.py
