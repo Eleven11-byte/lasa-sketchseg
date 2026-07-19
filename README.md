@@ -1,9 +1,9 @@
-# Exploiting Cross-layer Structural Attention for Open-Vocabulary Scene Sketch Semantic Segmentation
+# LASA: A Weak Supervision Method for Open-Vocabulary Scene Sketch Semantic Segmentation
 
 ## Overview
 
 This repository accompanies our paper:
-**"Exploiting Cross-layer Structural Attention for Open-Vocabulary Scene Sketch Semantic Segmentation."**
+**"LASA: A Weak Supervision Method for Open-Vocabulary Scene Sketch Semantic Segmentation."**
 
 It contains a cleaned open-source version of the core LASA code for training and evaluating scene sketch semantic segmentation models.
 
