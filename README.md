@@ -7,6 +7,8 @@ This repository accompanies our paper:
 
 It contains a cleaned open-source version of the core LASA code for training and evaluating scene sketch semantic segmentation models.
 
+![LASA framework](assets/framework.png)
+
 ## Repository Status
 
 This repository is under active cleanup for public release.
@@ -19,6 +21,8 @@ LASA/
     config.py
     train_fscoco.yaml
     test_fscoco.yaml
+  assets/
+    framework.png
   models/
     modified_model.py
     prompt_extractor.py
